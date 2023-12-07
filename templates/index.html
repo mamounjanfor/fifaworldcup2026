@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 - Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">HOME</a></li>
+        <li class="nav-item"><a href="history">HISTORY</a></li>
+        <li class="nav-item"><a href="states">STATES</a></li>
+        <li class="nav-item"><a href="stadiums">STADIUMS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Background Image Container -->
+    <div class="background-image">
+      <h1 class="title">FIFA World Cup 2026 Stadiums</h1>
+      <!-- Dropdown menu for selecting stadiums -->
+      <form class="stadium-form">
+        <select name="stadium" class="stadium-dropdown" id="stadium-select">
+          <option value="">Select a Stadium</option>
+          <option value="Atlanta-Mercedes-BenzStadium">
+            Mercedes-Benz Stadium
+          </option>
+          <option value="Boston-GilletteStadium">Gillette Stadium</option>
+          <option value="Dallas-AT&TStadium">AT&T Stadium</option>
+          <option value="Houston-NRGStadium">NRG Stadium</option>
+          <option value="Kansas City-ArrowheadStadium">
+            Arrowhead Stadium
+          </option>
+          <option value="Los Angeles-SoFiStadium">SoFi Stadium</option>
+          <option value="New York City-MetLifeStadium">MetLife Stadium</option>
+          <option value="Philadelphia-LincolnFinancialField">
+            Lincoln Financial Field
+          </option>
+          <option value="SanFrancisco">Levi's Stadium</option>
+          <option value="Seattle-LumenField">Lumen Field</option>
+        </select>
+      </form>
+      <div id="stadium-image-container" class="stadium-image"></div>
+      <!-- Your content here -->
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var selectElement = document.getElementById("stadium-select");
+        selectElement.addEventListener("change", function () {
+          var stadiumValue = this.value;
+          var imageContainer = document.getElementById(
+            "stadium-image-container"
+          );
+          // Assuming the option value corresponds directly to the filename
+          var imagePath =
+            "{{ url_for('static', filename='') }}" + stadiumValue + ".jpg";
+          imageContainer.innerHTML =
+            '<img src="' + imagePath + '" alt="Stadium Image" />';
+        });
+      });
+    </script>
+
+    <!-- Rest of your website's content goes here -->
+  </body>
+</html>

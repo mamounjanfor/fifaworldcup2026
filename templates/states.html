@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History - World Cup 2026</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="states-page">
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">HOME</a></li>
+        <li class="nav-item"><a href="/history">HISTORY</a></li>
+        <li class="nav-item"><a href="/states">STATES</a></li>
+
+        <li class="nav-item"><a href="/stadiums">STADIUMS</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>State Information</h1>
+      <div class="table-container">
+        <!-- Table to display the stadiums -->
+        <table class="world-cup-table">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Stadium</th>
+              <th>Capacity</th>
+              <th>City</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for stadium in stadiums_data %}
+            <tr>
+              <td>{{ stadium[0] }}</td>
+              <td>{{ stadium[1] }}</td>
+              <td>{{ stadium[2] }}</td>
+              <td>{{ stadium[3] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Container for history content -->
+
+    <!-- Rest of your website's content goes here -->
+  </body>
+</html>

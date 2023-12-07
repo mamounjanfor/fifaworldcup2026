@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stadiums - World Cup 2026</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="stadiums-page">
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">HOME</a></li>
+        <li class="nav-item"><a href="/history">HISTORY</a></li>
+        <li class="nav-item"><a href="/states">STATES</a></li>
+
+        <li class="nav-item"><a href="/stadiums">STADIUMS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Stadium Gallery -->
+    <div class="stadium-gallery">
+      <!-- Stadium 1 -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Atlanta-Mercedes-BenzStadium.jpg') }}"
+          alt="Mercedes-Benz Stadium"
+        />
+        <h3>Mercedes-Benz Stadium</h3>
+        <p>Atlanta, Capacity: 71,000</p>
+      </div>
+      <!-- Repeat this block for each stadium, replacing the src, alt, h3, and p content with the correct data -->
+      <!-- Stadium 2 -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Boston-GilletteStadium.jpg') }}"
+          alt="Gillette Stadium"
+        />
+        <h3>Gillette Stadium</h3>
+        <p>Boston, Capacity: 65,878</p>
+      </div>
+      <!-- Stadium 3 -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Dallas-AT&TStadium.jpg') }}"
+          alt="AT&T Stadium"
+        />
+        <h3>AT&T Stadium</h3>
+        <p>Dallas, Capacity: 80,000</p>
+      </div>
+      <!-- NRG Stadium -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Houston-NRGStadium.jpg') }}"
+          alt="NRG Stadium"
+        />
+        <h3>NRG Stadium</h3>
+        <p>Houston, TX - Capacity: 72,220</p>
+      </div>
+      <!-- Arrowhead Stadium -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Kansas City-ArrowheadStadium.jpg') }}"
+          alt="Arrowhead Stadium"
+        />
+        <h3>Arrowhead Stadium</h3>
+        <p>Kansas City, MO - Capacity: 76,416</p>
+      </div>
+      <!-- SoFi Stadium -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Los Angeles-SoFiStadium.jpg') }}"
+          alt="SoFi Stadium"
+        />
+        <h3>SoFi Stadium</h3>
+        <p>Los Angeles, CA - Capacity: 70,240</p>
+      </div>
+      <!-- MetLife Stadium -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='New York City-MetLifeStadium.jpg') }}"
+          alt="MetLife Stadium"
+        />
+        <h3>MetLife Stadium</h3>
+        <p>New York City, NY - Capacity: 82,500</p>
+      </div>
+      <!-- Lincoln Financial Field -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Philadelphia-LincolnFinancialField.jpg') }}"
+          alt="Lincoln Financial Field"
+        />
+        <h3>Lincoln Financial Field</h3>
+        <p>Philadelphia, PA - Capacity: 69,796</p>
+      </div>
+      <!-- San Francisco -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='SanFrancisco.jpg') }}"
+          alt="Levi's Stadium"
+        />
+        <h3>Levi's Stadium</h3>
+        <p>San Francisco, CA - Capacity: 68,500</p>
+      </div>
+      <!-- Seattle -->
+      <div class="stadium">
+        <img
+          src="{{ url_for('static', filename='Seattle-LumenField.jpg') }}"
+          alt="Lumen Field"
+        />
+        <h3>Lumen Field</h3>
+        <p>Seattle, WA - Capacity: 69,000</p>
+      </div>
+    </div>
+
+    <!-- Rest of your website's content goes here -->
+  </body>
+</html>

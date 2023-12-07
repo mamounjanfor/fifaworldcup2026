@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History - World Cup 2026</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="history-page">
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">HOME</a></li>
+        <li class="nav-item"><a href="/history">HISTORY</a></li>
+        <li class="nav-item"><a href="/states">STATES</a></li>
+
+        <li class="nav-item"><a href="/stadiums">STADIUMS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Container for history content -->
+    <div class="container">
+      <h1>History of the FIFA World Cup</h1>
+      <!-- World Cup Winners Table -->
+      <table class="world-cup-history">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Host Country</th>
+            <th>Winner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Use Jinja2 templating to iterate over the data and create a row for each -->
+          {% for item in world_cup_data %}
+          <tr>
+            <td>{{ item.year }}</td>
+            <td>{{ item.host }}</td>
+            <td>{{ item.winner }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

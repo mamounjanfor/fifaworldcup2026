@@ -1,0 +1,374 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Base styles for the navigation */
+.navigation {
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent black background */
+  color: white;
+  text-align: center;
+  position: fixed; /* Fixed position to keep it above */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* High z-index to ensure it's above other content */
+}
+
+/* Unordered list styles */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Set the height of your navigation */
+}
+
+/* Navigation item styles */
+.nav-item {
+  margin: 0 15px; /* Spacing between menu items */
+}
+
+/* Navigation link styles */
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+/* Hover and active states for navigation links */
+.nav-item a:hover,
+.nav-item a:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px; /* Rounded corners for the buttons */
+}
+
+.background-image {
+  background: url("/static/home.jpg") no-repeat center center;
+  background-size: cover; /* Cover the entire area */
+  position: absolute;
+  top: 60px; /* Start the image directly below the navigation bar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-aspect-ratio: 3/2) {
+  .background-image {
+    background-size: contain; /* On narrower viewports, show the full image */
+  }
+}
+
+@media (min-aspect-ratio: 3/2) {
+  .background-image {
+    background-position: center 100%; /* On wider viewports, adjust the vertical position */
+  }
+}
+
+/* Add a placeholder for your menu bar */
+.menu-bar {
+  height: 60px; /* Set the height of your menu bar */
+  width: 100%;
+  position: absolute;
+  top: 0; /* Position at the top */
+  background: #111; /* Just a placeholder color */
+}
+
+/* Base styles for the navigation */
+.navigation {
+  background: linear-gradient(
+    to right,
+    #0051ba,
+    #d90000
+  ); /* Gradient from blue to red */
+  color: white;
+  text-align: center;
+  position: fixed; /* The element is positioned relative to the browser window */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensures the navigation bar is above other elements */
+}
+
+/* Unordered list styles */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Adjust as needed */
+}
+
+/* Navigation item styles */
+.nav-item {
+  margin: 0 15px; /* Spacing between menu items */
+}
+
+/* Navigation link styles */
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+/* Hover and active states for navigation links */
+.nav-item a:hover,
+.nav-item a:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px; /* Optional: rounded corners for the buttons */
+}
+
+.title {
+  position: absolute;
+  bottom: 60%; /* Adjust this value to place the title directly under the eagle */
+  width: 100%;
+  text-align: center;
+  color: white; /* Choose a color that stands out against your background */
+  font-size: 3rem; /* Adjust the size as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: text shadow for better readability */
+  z-index: 10; /* Ensure the title is above the background image */
+}
+
+.stadium-form {
+  text-align: center; /* Center the form on the page */
+  position: absolute;
+  bottom: 43%; /* Adjust based on your layout, placing it below the title */
+  left: 50%;
+  transform: translateX(-50%); /* Center the form horizontally */
+  z-index: 10; /* Ensure it's above the background image */
+}
+
+.stadium-dropdown {
+  padding: 15px 50px;
+  font-size: 1.1rem; /* Adjust size as needed */
+
+  margin-top: 10px; /* Spacing from the title or any other elements above */
+  border: 1px solid #ccc; /* Style the border as needed */
+  border-radius: 20px; /* Optional: rounded corners */
+  background-color: #008000; /* Adjust dropdown background color as needed */
+  color: white; /* Dropdown text color */
+  -webkit-appearance: none; /* Removes default styling on iOS */
+  -moz-appearance: none; /* Removes default styling on Firefox */
+  appearance: none; /* Standard syntax to remove default arrow */
+  text-align: center;
+}
+
+/* Style for dropdown arrow - optional */
+.stadium-dropdown::after {
+  content: "▼";
+  font-size: 0.8em;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* You may want to add styles for hover, focus, and active states */
+.stadium-dropdown:hover,
+.stadium-dropdown:focus {
+  border-color: #888; /* Example hover/focus color */
+  outline: none; /* Remove the default focus outline */
+}
+
+.stadiums-page {
+  background: linear-gradient(to bottom, #9c2a37, #202173);
+  color: white;
+  /* ...other styles... */
+}
+
+/* Grid Gallery for stadiums */
+.stadiums-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.stadiums-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: for rounded corners */
+}
+.stadium-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.stadium {
+  text-align: center;
+}
+
+.stadium img {
+  width: 100%; /* or a specific pixel value */
+  height: 200px; /* fixed height for all images */
+  object-fit: cover; /* This will ensure the aspect ratio is maintained without stretching the image */
+  border-radius: 10px; /* If you want rounded corners */
+}
+
+.stadium h3 {
+  margin-top: 0.5em;
+  color: rgb(255, 255, 255); /* Adjust text color as needed */
+}
+
+.stadium p {
+  color: rgb(221, 221, 221); /* Adjust text color as needed */
+}
+
+.stadiums-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.stadium {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.173
+  ); /* Or any color that fits your design */
+  border: 1px solid #ddd; /* Light border for the cells */
+  border-radius: 8px; /* Optional: rounded corners for the cells */
+}
+
+.stadium img {
+  width: 100%;
+  display: block;
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+}
+
+.stadium-info {
+  padding: 0.5rem;
+}
+
+.stadium-info h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.stadium-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.history-page {
+  background: linear-gradient(
+    to bottom,
+    #9c2a37,
+    #202173
+  ); /* The same gradient as the stadiums page */
+  color: white;
+  /* Other styles can be added as needed */
+}
+
+.world-cup-history {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Add space above the table */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.world-cup-history th,
+.world-cup-history td {
+  border: 1px solid #ddd; /* Light border for cells */
+  padding: 8px;
+  text-align: center;
+}
+
+.world-cup-history th {
+  background-color: #0051ba; /* Blue header background */
+  color: white;
+}
+
+.world-cup-history tr:nth-child(even) {
+  background-color: #0051ba; /* Zebra striping for rows */
+}
+
+.world-cup-history tr:hover {
+  background-color: #ddd; /* Hover effect for rows */
+}
+
+.states-page {
+  background: linear-gradient(
+    to bottom,
+    #9c2a37,
+    #202173
+  ); /* The same gradient as the stadiums page */
+  color: white;
+  /* Other styles can be added as needed */
+}
+
+/* Table styles */
+.table-container {
+  padding: 2rem;
+  overflow-x: auto; /* Allows table to scroll on small screens */
+}
+
+.world-cup-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 2rem; /* Add space above the table */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.world-cup-table th,
+.world-cup-table td {
+  border: 1px solid #ddd; /* Light border for cells */
+  padding: 8px;
+  text-align: center;
+}
+
+.world-cup-table th {
+  background-color: #0051ba; /* Blue header background */
+  color: white;
+}
+
+.world-cup-table tr:nth-child(even) {
+  background-color: #0051ba; /* Zebra striping for rows */
+}
+
+.world-cup-table tr:hover {
+  background-color: rgb(221, 221, 221); /* Hover effect for rows */
+}
+
+/* New CSS for the image container */
+/* CSS for the image container */
+.stadium-image {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%; /* Adjust this value as needed to position below the dropdown */
+  padding-bottom: 50px; /* Add some padding to ensure it doesn't touch the bottom */
+  z-index: 9; /* Optional, ensures the image is below the form in the stacking order */
+}
+
+/* CSS for the image itself */
+.stadium-image img {
+  border: 5px solid rgba(74, 86, 108, 0.595);
+  border-radius: 10px;
+  max-width: 80%; /* You can adjust this value to control the width of the image */
+  max-height: 300px; /* Set a maximum height for the image */
+  height: auto; /* Keeps the image's aspect ratio */
+  margin-top: 20px; /* Space between the dropdown and the image */
+  border-radius: 10px; /* If you want rounded corners */
+
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
