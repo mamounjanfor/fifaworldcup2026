@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FIFA World Cup 2026 Stadiums Project
 
 ##youtube link
@@ -46,3 +47,6 @@ Thanks to all my instructors.
 
 ##License
 This project is licensed under the [mamounjanfor]
+=======
+# fifaworldcup2026
+>>>>>>> origin/main
